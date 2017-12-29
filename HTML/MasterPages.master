@@ -1,0 +1,80 @@
+﻿<%@ Master Language="VB" CodeFile="MasterPages.master.vb" Inherits="HTML_MasterPages" %>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>CapApp</title>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link rel="stylesheet" href="css/bootstrap.min.css" />
+<link rel="stylesheet" href="css/bootstrap-responsive.min.css" />
+<link rel="stylesheet" href="css/fullcalendar.css" />
+<link rel="stylesheet" href="css/maruti-style.css" />
+<link rel="stylesheet" href="css/maruti-media.css" class="skin-color" />
+<link rel="stylesheet" href="css/uniform.css" />
+<link rel="stylesheet" href="css/select2.css" />
+</head>
+<body>
+
+<!--Header-part-->
+<div id="header">
+  <h1><a href="Index.aspx">CapApp</a></h1>
+</div>
+<!--close-top-Header-messaages--> 
+
+<!--top-Header-menu-->
+<div id="user-nav" class="navbar navbar-inverse">
+  <ul class="nav">
+    <li class="" ><a title="" href="#"><i class="icon icon-user"></i> <span class="text" id="Nombre" runat="server"></span></a></li>
+    <li class=""><a title="" href="../login.aspx"><i class="icon icon-share-alt"></i> <span class="text">Logout</span></a></li>
+  </ul>
+</div>
+<div id="search">
+  <input type="text" placeholder="Search here..."/>
+  <button type="submit" class="tip-left" title="Search"><i class="icon-search icon-white"></i></button>
+</div>
+<!--close-top-Header-menu-->
+
+<div id="sidebar"><a href="#" class="visible-phone"><i class="icon icon-home"></i> Menu</a><ul>
+    <li class="active"><a href="index.aspx"><i class="icon icon-home"></i> <span>Inicio</span></a> </li>
+    <li class="submenu"> <a href="#"><i class="icon icon-user"></i> <span>Empleados</span> <span class="label label-important">2</span></a>
+        <ul>
+            <li><a href="Empleados.aspx">Informacion de Empleados</a></li>
+            <li><a href="NEmpleado.aspx">Nuevo Empleado</a></li>
+        </ul>
+    </li>
+    <li class="submenu"> <a href="#"><i class="icon icon-signal"></i> <span>Cursos</span> <span class="label label-important">2</span></a>
+      <ul>
+        <li><a href="cursos.aspx">Lista de Curso</a></li>
+        <li><a href="NCursos.aspx">Nuevo Curso</a></li>
+      </ul>
+    </li>
+    <li><a href="calendar.aspx"><i class="icon icon-calendar"></i> <span>Calendario</span></a></li>
+    <li class="submenu"> <a href="#"><i class="icon icon-user"></i> <span>Usuarios</span> <span class="label label-important">2</span></a>
+      <ul>
+        <li><a href="user.aspx">Administrar Usuarios</a></li>
+        <li><a href="Nuser.aspx">Crear Usuarios</a></li>
+      </ul>
+    </li>
+  </ul>
+</div>
+    <form id="form1" runat="server">
+    <div>
+        <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+        
+        </asp:ContentPlaceHolder>
+    </div>
+    </form>
+<div class="row-fluid">
+  <div id="footer" class="span12"> 2012 &copy; Marutii Admin. Brought to you by <a href="http://themedesigner.in">Themedesigner.in</a> </div>
+</div>
+    <script src="js/jquery.min.js"></script> 
+<script src="js/jquery.ui.custom.js"></script> 
+<script src="js/bootstrap.min.js"></script> 
+<script src="js/jquery.uniform.js"></script> 
+<script src="js/select2.min.js"></script> 
+<script src="js/jquery.dataTables.min.js"></script> 
+<script src="js/maruti.js"></script> 
+<script src="js/maruti.tables.js"></script>
+</body>
+</html>
